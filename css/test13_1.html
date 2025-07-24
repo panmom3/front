@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그(test13.html)</title>
+  <style>
+    body {
+      /* margin: 0px auto; */
+    }
+    .container {
+      width: 350px;
+      margin: 0px auto;
+      line-height: 2.2em;
+      border: 1px solid gray;
+      padding: 16px;
+      background-color: #eee;
+      border-radius: 20px;
+    }
+    input[type="text"], input[type="password"], input[type="number"] {
+      background-color: yellow;
+      color: blue;
+      border: 1px solid red;
+      padding: 3px 0px 3px 5px;
+      margin: 0px 0px 10px;
+      font-size: 1.2em;
+    }
+    input[type="text"]:hover, input[type="password"]:hover, input[type="number"]:hover {
+      background-color: #ddd;
+    }
+    /* 
+    input[type="password"] {
+      padding: 3px 0px 3px 5px;
+      margin: 0px 0px 10px;
+      font-size: 1.2em;
+    }
+     */
+    
+    .btn {
+      text-align: center;
+    }
+    button {
+      background-color: green;
+      color: white;
+      cursor: pointer;
+      padding: 5px;
+      margin-right: 6px;
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>Form태그와 CSS</h2>
+  <div class="container">
+    <div class="gid">
+      <label for="mid">아이디</label>
+      <input type="text" name="mid" id="mid" size="20" placeholder="아이디를 입력하세요" required autofocus />
+    </div>
+    <div class="gpwd">
+      <label for="pwd">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" size="20" placeholder="비밀번호를 입력하세요" required />
+    </div>
+    <div class="gage">
+      <label for="age">나이</label>
+      <input type="number" name="age" id="age" size="20" value="20" min="12" max="99" placeholder="나이를 입력하세요" required />
+    </div>
+    <div class="gaddress">
+      <label for="address">주소</label>
+      <input type="text" name="address" id="address" size="20" value="청주" placeholder="주소를 입력하세요" required />
+    </div>
+    <div class="btn">
+      <button>회원가입</button>
+      <button>다시입력</button>
+      <button>돌아가기</button>
+    </div>
+  </div>
+</body>
+</html>

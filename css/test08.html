@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자식선택자(test08.html)</title>
+  <style>
+    * {
+      font-family: "궁서체","굴림체";
+    }
+    /* div { */
+    /* div span { */
+    div > div {
+      background-color: yellow;
+    }
+    .aa {
+      color: blue;
+    }
+    div > div > span.aa {
+      font-size: 20pt;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="aa">제목2 - aa</h2>
+  <h2>제목2 - bb</h2>
+  <div>안녕하세요
+    <span>안녕2</span>
+    <div>안녕2-2</div>
+    <p>안녕3</p>
+    <div>안녕3-2
+      <span class="aa">안녕3-2-2</span>
+      <div>안녕3-2-3</div>
+    </div>
+  </div>
+  <span>안녕4</span>
+  <div>안녕5</div>
+</body>
+</html>

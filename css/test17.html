@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test17.html(max-width)</title>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+      background-color: #333;
+      position: sticky;
+      top: 0px;
+    }
+    li {
+      float: left;
+    }
+    li a {
+      display: block;
+      color: #000;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+    /* li a:hover {
+      background-color: #777;
+    } */
+    li a.active {
+      background-color: rgb(96, 182, 10);
+      color:white
+    }
+    li a:hover:not(.active) {
+      background-color: #555;
+      color:white
+    }
+    .container {
+      margin-top: -50px;
+    }
+
+
+
+
+
+    div.ex1 {
+      width: 500px;
+      border: 2px solid gray;
+    }
+    div.ex2 {
+      max-width: 500px;
+      border: 2px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="test23_menu3.html#home" class="active">Home</a></li>
+    <li><a href="test23_menu3.html#notice">Notice</a></li>
+    <li><a href="test23_menu3.html#guest">Guest</a></li>
+    <li><a href="test23_menu3.html#board">Board</a></li>
+    <li><a href="test17.html">Test17</a></li>
+  </ul>
+
+  <h2>CSS max-width</h2>
+  <div class="ex1">이곳의 최대폭은 500px입니다.(width)</div>
+  <br/>
+  <div class="ex2">이곳의 최대폭은 500px입니다.(max-width)</div>
+  <hr/>
+</body>
+</html>

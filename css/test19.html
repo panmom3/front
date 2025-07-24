@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test19.html(box-sizing)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .box {
+      float: left;
+      width: 33.33%;
+      padding: 50px;
+    }
+    .img-box {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    .container::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+    .container2::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+    #imgTest::before {
+      content: "♥ ";
+    }
+    #imgTest::selection {
+      color: white;
+      background-color: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <h2>box-sizing 연습</h2>
+  <div class="container">
+    <div class="box" style="background-color: aquamarine;"><p>1.이곳은 박스 안쪽입니다.</p></div>
+    <div class="box" style="background-color: blueviolet;"><p>2.이곳은 박스 안쪽입니다.</p></div>
+    <div class="box" style="background-color: chartreuse;"><p>3.이곳은 박스 안쪽입니다.</p></div>
+  </div>
+  <hr />
+  <p>
+    <span id="imgTest">참고 : 브라우저의 폭을 마우스로 움직여보세요...</span>
+  </p>
+  <hr/>
+  <div class="container2">
+    <div class="img-box"><img src="../images/1.jpg" width="200px" /></div>
+    <div class="img-box"><img src="../images/2.jpg" width="200px" /></div>
+    <div class="img-box"><img src="../images/3.jpg" width="200px" /></div>
+  </div>
+</body>
+</html>
