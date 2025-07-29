@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html</title>
+  <!-- <script type="text/javascript" language="Jvascript"> -->
+  <script type="text/javascript" src="test1.js"></script>
+  <script>
+    window.document.write("1.안녕하세요....<br/>");
+    // window객체는 생략가능
+    document.write("<p>2.안녕하세요....</p>");
+    /*
+    이곳은
+    자바스크립트
+    여러줄 주석 입니다.
+    */
+    document.write("3.이곳은 자바스크립트 안쪽 영역입니다.");
+  </script>
+</head>
+<body>
+  <h2>이곳은 body태그 안쪽 영역입니다.</h2>
+
+  <script>
+    document.write("이곳은 본문의 마지막 위치입니다.<br/>")
+  </script>
+</body>
+<script>
+  document.write("이곳은 body태그 뒤쪽 위치입니다.")
+</script>
+</html>

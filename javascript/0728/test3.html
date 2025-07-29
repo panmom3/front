@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html(변수)</title>
+  <script>
+    'use strict';
+    
+    atom = 100;
+    document.write("atom : " + atom);
+    console.log("atom", atom);
+    
+    var mbc = 200;
+    console.log("mbc", mbc);
+    document.write("<br/>mbc : " + mbc);
+    
+    let kbs = 300;
+    console.log("kbs", kbs);
+    document.write("<br/>kbs : " + kbs);
+    
+    const sbs = 400;
+    console.log("sbs", sbs);
+    document.write("<br/>sbs : " + sbs);
+
+    var mbc = 3.14;
+    console.log("mbc", mbc);
+    document.write("<br/>mbc : " + mbc);
+
+    // let kbs = 3.14;  error: 이미 사용된 변수를 다시 선언해서 error
+    kbs = 3.14;
+    console.log("kbs", kbs);
+    document.write("<br/>kbs : " + kbs);
+
+    // sbs = 3.14;    error : const는 이미 할당된 변수의 값을 변경할수 없다.
+    console.log("sbs", sbs);
+    document.write("<br/>sbs : " + sbs);
+    
+    //'use strict';
+    cjb = 500;
+    console.log("cjb", cjb);
+    document.write("<br/>cjb : " + cjb);
+
+  </script>
+</head>
+<body>
+  <h3>이곳은 본문 영역입니다.</h3>
+</body>
+</html>
