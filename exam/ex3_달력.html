@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>자바스크립트 달력</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .calendar {
+      display: inline-block;
+      width: 300px;
+    }
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .calendar-days, .calendar-dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+    .calendar-days div,
+    .calendar-dates div {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .today {
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calendar">
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">◀</button>
+      <h2 id="month-year"></h2>
+      <button onclick="changeMonth(1)">▶</button>
+    </div>
+    <div class="calendar-days">
+      <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
+    </div>
+    <div class="calendar-dates" id="calendar-dates"></div>
+  </div>
+
+  <script>
+    let today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+
+    function renderCalendar(year, month) {
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+
+      document.getElementById("month-year").innerText = `${year}년 ${month + 1}월`;
+
+      const datesEl = document.getElementById("calendar-dates");
+      datesEl.innerHTML = "";
+
+      for (let i = 0; i < firstDay; i++) {
+        datesEl.innerHTML += `<div></div>`;
+      }
+
+      for (let day = 1; day <= lastDate; day++) {
+        const date = new Date(year, month, day);
+        const isToday = 
+          day === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear();
+
+        datesEl.innerHTML += `<div class="${isToday ? 'today' : ''}">${day}</div>`;
+      }
+    }
+
+    function changeMonth(offset) {
+      currentMonth += offset;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      } else if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      renderCalendar(currentYear, currentMonth);
+    }
+
+    renderCalendar(currentYear, currentMonth);
+  </script>
+
+</body>
+</html>
